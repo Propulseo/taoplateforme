@@ -1,0 +1,26 @@
+/* ═══════════════════════════════════════════
+   TAO — Page Trimestre
+   ═══════════════════════════════════════════ */
+
+.trimestre-countdown {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.trimestre-objectifs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.trimestre-card {
+  padding: var(--space-xl);
+}
+
+.trimestre-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

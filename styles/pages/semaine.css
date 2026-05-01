@@ -1,0 +1,268 @@
+/* ═══════════════════════════════════════════
+   TAO — Page Semaine
+   ═══════════════════════════════════════════ */
+
+.semaine-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.semaine-header-bar h3 {
+  font-size: 1.1rem;
+}
+
+/* Grille calendrier */
+.semaine-grid {
+  display: grid;
+  grid-template-columns: 50px repeat(7, 1fr);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+}
+
+.semaine-hours {
+  grid-column: 1;
+  grid-row: 2 / span 12;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+}
+
+.semaine-hour {
+  height: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 2px 8px 0 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.semaine-days {
+  grid-column: 2 / -1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.semaine-day-header {
+  padding: 10px;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+.semaine-day-header:last-child {
+  border-right: none;
+}
+
+.semaine-day-header.aujourdhui-marker {
+  color: var(--neon);
+  font-weight: 400;
+  position: relative;
+}
+
+.semaine-day-header.aujourdhui-marker::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--neon);
+}
+
+.semaine-body {
+  grid-column: 2 / -1;
+  grid-row: 2 / span 12;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(12, 50px);
+  position: relative;
+}
+
+.semaine-plage {
+  border-radius: var(--radius-sm);
+  padding: 4px 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  margin: 2px;
+  overflow: hidden;
+}
+
+.plage-tao {
+  background: var(--neon-deep);
+  border-left: 3px solid var(--neon);
+  color: var(--text);
+}
+
+.plage-externe {
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+.plage-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+/* Stats semaine */
+.semaine-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+/* Mini-graphe barres */
+.mini-graph {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 100px;
+}
+
+.mini-graph-bar {
+  flex: 1;
+  background: var(--neon-deep);
+  border-radius: 3px 3px 0 0;
+  min-height: 4px;
+  position: relative;
+  transition: height 800ms ease-out;
+}
+
+.mini-graph-bar.active {
+  background: var(--neon);
+}
+
+.mini-graph-bar span {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.mini-graph-bar.active span {
+  color: var(--neon);
+}
+
+.mini-graph-labels {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.mini-graph-labels span {
+  flex: 1;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+/* Repartition */
+.repartition-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.repartition-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.repartition-item span {
+  min-width: 60px;
+}
+
+.repartition-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.repartition-fill {
+  height: 100%;
+  background: var(--neon);
+  border-radius: 3px;
+  transition: width 800ms ease-out;
+}
+
+@media (max-width: 768px) {
+  .semaine-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .semaine-grid {
+    overflow-x: auto;
+  }
+
+  .semaine-hour {
+    font-size: 10px;
+  }
+
+  .semaine-day-header {
+    font-size: 10px;
+    padding: 6px 4px;
+  }
+}
+
+/* ── Plage detail panel (slide-in) ── */
+.plage-detail-panel {
+  position: fixed;
+  right: -320px;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  background: var(--bg-card);
+  border-left: 1px solid var(--border);
+  z-index: 200;
+  padding: 24px;
+  transition: right 200ms ease;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.3);
+}
+.plage-detail-panel.open { right: 0; }
+.plage-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.plage-detail-header h4 { font-size: 16px; }
+.plage-detail-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+.plage-detail-body { display: flex; flex-direction: column; gap: 12px; }
+.plage-detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}

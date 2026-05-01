@@ -1,0 +1,97 @@
+        <!-- Hero compteur -->
+        <div class="card-elevated recompenses-hero">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5" style="animation:pulse-neon 3s infinite;border-radius:50%"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>
+          <div class="recompenses-coins-value">1,247</div>
+          <div class="recompenses-coins-label">COINS</div>
+          <div class="recompenses-niveau">
+            <span>Niveau 4 · 3,300 XP avant niveau 5</span>
+            <div class="objectif-progress" style="height:6px;margin-top:8px;width:300px;max-width:100%">
+              <div class="objectif-progress-fill" style="width:56%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+          <div class="tab active" data-tab="boutique">Boutique</div>
+          <div class="tab" data-tab="badges">Badges</div>
+          <div class="tab" data-tab="streak">Streak</div>
+        </div>
+
+        <!-- Tab Boutique -->
+        <div class="tab-content active" data-tab-content="boutique">
+          <div class="boutique-grid">
+            <div class="card boutique-item">
+              <div class="tag" style="margin-bottom:8px">RESSOURCES</div>
+              <h4 style="font-size:14px;margin-bottom:4px">Template Notion "Solopreneur OS"</h4>
+              <p class="text-muted" style="font-size:12px;margin-bottom:12px">Systeme complet Notion pour gerer ton activite solo.</p>
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <span class="text-neon font-display" style="font-size:18px;font-weight:800">200</span>
+                <button class="btn-primary" style="padding:8px 16px;font-size:11px">Acheter</button>
+              </div>
+            </div>
+            <div class="card boutique-item">
+              <div class="tag" style="margin-bottom:8px">RESSOURCES</div>
+              <h4 style="font-size:14px;margin-bottom:4px">Guide PDF "3 taches, pas plus"</h4>
+              <p class="text-muted" style="font-size:12px;margin-bottom:12px">La methode Tao en 12 pages actionnables.</p>
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <span class="text-neon font-display" style="font-size:18px;font-weight:800">100</span>
+                <button class="btn-primary" style="padding:8px 16px;font-size:11px">Acheter</button>
+              </div>
+            </div>
+            <div class="card boutique-item">
+              <div class="tag" style="margin-bottom:8px">RESSOURCES</div>
+              <h4 style="font-size:14px;margin-bottom:4px">Mini-formation "Focus profond"</h4>
+              <p class="text-muted" style="font-size:12px;margin-bottom:12px">Video 15 min sur les plages de deep work.</p>
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <span class="text-neon font-display" style="font-size:18px;font-weight:800">500</span>
+                <button class="btn-primary" style="padding:8px 16px;font-size:11px">Acheter</button>
+              </div>
+            </div>
+            <div class="card boutique-item">
+              <div class="tag" style="margin-bottom:8px">COACHING</div>
+              <h4 style="font-size:14px;margin-bottom:4px">Session Q&A live avec Etienne</h4>
+              <p class="text-muted" style="font-size:12px;margin-bottom:12px">Prochaine session : 15 juin 2026 a 18h.</p>
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <span class="text-neon font-display" style="font-size:18px;font-weight:800">1,000</span>
+                <button class="btn-primary" style="padding:8px 16px;font-size:11px">Acheter</button>
+              </div>
+            </div>
+            <div class="card boutique-item">
+              <div class="tag" style="margin-bottom:8px">COACHING</div>
+              <h4 style="font-size:14px;margin-bottom:4px">Plan coaching sport 4 semaines</h4>
+              <p class="text-muted" style="font-size:12px;margin-bottom:12px">Programme HIIT + musculation par Coach Alex.</p>
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <span class="text-neon font-display" style="font-size:18px;font-weight:800">2,000</span>
+                <button class="btn-ghost" style="opacity:0.5;font-size:11px">Pas assez de Coins</button>
+              </div>
+            </div>
+            <div class="card boutique-item">
+              <div class="tag" style="margin-bottom:8px">RESSOURCES</div>
+              <h4 style="font-size:14px;margin-bottom:4px">Template "Bilan trimestriel"</h4>
+              <p class="text-muted" style="font-size:12px;margin-bottom:12px">Retroplanning + analyse de tes 3 piliers.</p>
+              <div style="display:flex;align-items:center;justify-content:space-between">
+                <span class="text-neon font-display" style="font-size:18px;font-weight:800">150</span>
+                <button class="btn-primary" style="padding:8px 16px;font-size:11px">Acheter</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Badges -->
+        <div class="tab-content" data-tab-content="badges">
+          <div class="badges-grid" id="badges-grid">
+            <!-- Badges generes via JS ou en dur -->
+          </div>
+        </div>
+
+        <!-- Tab Streak -->
+        <div class="tab-content" data-tab-content="streak">
+          <div class="streak-hero">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+            <div class="streak-hero-value">12</div>
+            <div class="streak-hero-label">JOURS CONSECUTIFS</div>
+            <p class="text-muted" style="margin-top:8px;font-size:13px">Meilleur streak : 23 jours</p>
+            <p class="text-muted" style="font-size:12px;margin-top:16px;padding:8px 12px;background:var(--surface);border-radius:var(--radius-md)">Tu as 1 jour de grace par semaine. Ne te casse pas la tete pour 1 mauvaise journee.</p>
+          </div>
+        </div>

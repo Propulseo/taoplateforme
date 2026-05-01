@@ -1,0 +1,67 @@
+        <div class="todo-layout">
+
+          <!-- ── Sidebar Todo ── -->
+          <div class="todo-sidebar">
+            <div class="todo-sidebar-label">VUES</div>
+            <div class="todo-sidebar-item active" data-todo-view="todo-aujourdhui">
+              <span class="todo-sidebar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span>
+              <span>Aujourd'hui</span>
+              <span class="todo-sidebar-count">11</span>
+            </div>
+            <div class="todo-sidebar-item" data-todo-view="todo-avenir">
+              <span class="todo-sidebar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M16 14h2M16 18h2"/></svg></span>
+              <span>A venir</span>
+              <span class="todo-sidebar-count">12</span>
+            </div>
+            <div class="todo-sidebar-item" data-todo-view="todo-boite">
+              <span class="todo-sidebar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></span>
+              <span>Boite</span>
+              <span class="todo-sidebar-count">8</span>
+            </div>
+            <div class="todo-sidebar-item" data-todo-view="todo-attente">
+              <span class="todo-sidebar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/></svg></span>
+              <span>En attente</span>
+              <span class="todo-sidebar-count">3</span>
+            </div>
+            <div class="todo-sidebar-item" data-todo-view="todo-longterme">
+              <span class="todo-sidebar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></span>
+              <span>Long terme</span>
+              <span class="todo-sidebar-count">8</span>
+            </div>
+
+            <div class="todo-sidebar-label">PROJETS</div>
+            <div class="todo-sidebar-item" data-todo-view="todo-projet" data-projet-id="lancement-tao">
+              <span class="todo-sidebar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg></span>
+              <span>Lancement Tao</span>
+            </div>
+            <div class="todo-sidebar-item" data-todo-view="todo-projet" data-projet-id="voyage-lisbonne">
+              <span class="todo-sidebar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg></span>
+              <span>Voyage Lisbonne</span>
+            </div>
+            <div class="todo-sidebar-item" data-todo-view="todo-projet" data-projet-id="coaching-sport">
+              <span class="todo-sidebar-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg></span>
+              <span>Coaching sport</span>
+            </div>
+            <div class="todo-sidebar-newproject">
+              <span class="todo-sidebar-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+              <span>Nouveau projet</span>
+            </div>
+          </div>
+
+          <!-- Main content area - views loaded dynamically -->
+          <div class="todo-main" id="todo-main-content">
+            <!-- Todo views loaded here -->
+          </div>
+        </div>
+
+        <!-- FAB -->
+        <button class="todo-fab" id="todo-fab-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+
+        <!-- Keyboard hints -->
+        <div class="todo-kbd-hint">
+          <span><kbd>N</kbd> nouvelle tache</span>
+          <span><kbd>J</kbd><kbd>K</kbd> naviguer</span>
+          <span><kbd>X</kbd> cocher</span>
+        </div>

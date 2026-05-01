@@ -1,0 +1,99 @@
+        <div class="chat-container">
+
+          <!-- Header chat -->
+          <div class="chat-header">
+            <div class="chat-header-left">
+              <img src="assets/fox/fox-confident.svg" alt="Tao" class="chat-avatar-header">
+              <span class="chat-header-name">Tao</span>
+              <span class="chat-status-pill"><span class="chat-status-dot"></span> live · synchronise</span>
+            </div>
+          </div>
+
+          <!-- Messages -->
+          <div class="chat-messages">
+
+            <div class="chat-bubble chat-bubble-tao">
+              <img src="assets/fox/fox-confident.svg" alt="" class="chat-bubble-avatar">
+              <div class="chat-bubble-content">
+                <p>Quelles sont tes 3 taches aujourd'hui ?</p>
+                <span class="chat-bubble-time">07:15</span>
+              </div>
+            </div>
+
+            <div class="chat-bubble chat-bubble-user">
+              <div class="chat-bubble-content">
+                <p>Dashboard Tao ce matin, appeler Lea a midi, et sport ce soir.</p>
+                <span class="chat-bubble-time">07:16</span>
+              </div>
+            </div>
+
+            <div class="chat-bubble chat-bubble-tao">
+              <img src="assets/fox/fox-confident.svg" alt="" class="chat-bubble-avatar">
+              <div class="chat-bubble-content">
+                <p>Note. J'ai cale tes 3 plages : 9h, 12h30, 18h. Tes blocs sont dans ton calendrier.</p>
+                <span class="chat-bubble-time">07:16</span>
+              </div>
+            </div>
+
+            <div class="chat-bubble chat-bubble-user">
+              <div class="chat-bubble-content">
+                <p>Ah et faut que je rappelle Marc pour le devis, il m'a toujours pas repondu.</p>
+                <span class="chat-bubble-time">10:32</span>
+              </div>
+            </div>
+
+            <div class="chat-bubble chat-bubble-tao">
+              <img src="assets/fox/fox-thinking.svg" alt="" class="chat-bubble-avatar">
+              <div class="chat-bubble-content">
+                <p>Marc, le devis. Ca fait 5 jours qu'il n'a pas repondu. Je mets ca dans ta liste "En attente".</p>
+                <span class="chat-bubble-time">10:32</span>
+              </div>
+            </div>
+
+            <!-- Mini-card capture -->
+            <div class="chat-capture-card">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--neon)"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Ajoute dans En attente : "Retour de Marc sur le devis"</span>
+              <a href="#" class="chat-capture-link" onclick="navigateTo('todo');return false">Voir →</a>
+            </div>
+
+            <div class="chat-bubble chat-bubble-user">
+              <div class="chat-bubble-content">
+                <p>Et garde en tete que je voudrais creer une chaine YouTube sur la productivite un jour.</p>
+                <span class="chat-bubble-time">10:45</span>
+              </div>
+            </div>
+
+            <div class="chat-bubble chat-bubble-tao">
+              <img src="assets/fox/fox-confident.svg" alt="" class="chat-bubble-avatar">
+              <div class="chat-bubble-content">
+                <p>Note dans Long terme. Ca ne sert aucun de tes 3 objectifs ce trimestre, mais c'est bien de le garder.</p>
+                <span class="chat-bubble-time">10:45</span>
+              </div>
+            </div>
+
+            <div class="chat-capture-card">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--neon)"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Ajoute dans Long terme : "Creer une chaine YouTube productivite"</span>
+              <a href="#" class="chat-capture-link" onclick="navigateTo('todo');return false">Voir →</a>
+            </div>
+
+            <!-- Typing indicator -->
+            <div class="chat-typing hidden" id="chat-typing">
+              <img src="assets/fox/fox-thinking.svg" alt="" class="chat-bubble-avatar">
+              <div class="chat-typing-dots">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Input chat -->
+          <div class="chat-input-bar">
+            <textarea class="chat-input" placeholder="Parle a Tao..." rows="1"></textarea>
+            <button class="chat-send-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+
+        </div>

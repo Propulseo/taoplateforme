@@ -1,0 +1,147 @@
+        <!-- Banniere 3 taches du jour -->
+        <div class="objectifs-banniere">
+          <div class="objectif-card tache-banniere-card faite" data-tache-id="1">
+            <div class="objectif-header">
+              <div class="tache-checkbox checked">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <span class="objectif-label">TAFF · 09:00</span>
+            </div>
+            <div class="objectif-titre">Finaliser le design du dashboard Tao</div>
+            <div class="tache-banniere-actions">
+              <button class="btn-ghost tache-banniere-chrono" title="Lancer 45 min" disabled>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3L2 6"/><path d="M22 6l-3-3"/><path d="M12 5V3"/><path d="M10 3h4"/></svg>
+                <span>Termine</span>
+              </button>
+            </div>
+          </div>
+          <div class="objectif-card tache-banniere-card en-cours" data-tache-id="2">
+            <div class="objectif-header">
+              <div class="tache-checkbox"></div>
+              <span class="objectif-label">VIE · 12:30</span>
+            </div>
+            <div class="objectif-titre">Appeler Lea pour organiser le weekend</div>
+            <div class="tache-banniere-actions">
+              <button class="btn-secondary tache-banniere-chrono" title="Lancer 45 min">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3L2 6"/><path d="M22 6l-3-3"/><path d="M12 5V3"/><path d="M10 3h4"/></svg>
+                <span>45 min</span>
+              </button>
+            </div>
+          </div>
+          <div class="objectif-card tache-banniere-card" data-tache-id="3">
+            <div class="objectif-header">
+              <div class="tache-checkbox"></div>
+              <span class="objectif-label">PERSO · 18:00</span>
+            </div>
+            <div class="objectif-titre">Session HIIT 30 min</div>
+            <div class="tache-banniere-actions">
+              <button class="btn-secondary tache-banniere-chrono" title="Lancer 45 min">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3L2 6"/><path d="M22 6l-3-3"/><path d="M12 5V3"/><path d="M10 3h4"/></svg>
+                <span>45 min</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Layout 2 colonnes : sidebar gauche + calendrier -->
+        <div class="aujourdhui-grid">
+
+          <!-- Colonne gauche : ScoreRing + Coins + Streak + Events -->
+          <div class="aujourdhui-aside">
+
+            <!-- ScoreRing -->
+            <div class="card score-ring-container">
+              <div class="score-ring">
+                <svg viewBox="0 0 200 200">
+                  <!-- Cercle externe : Taff -->
+                  <circle class="ring-bg" cx="100" cy="100" r="90" stroke-width="8"/>
+                  <circle class="ring-fill" cx="100" cy="100" r="90" stroke-width="8"
+                    stroke-dasharray="565.48" data-percent="100" style="stroke-dashoffset:565.48"/>
+                  <!-- Cercle moyen : Vie -->
+                  <circle class="ring-bg" cx="100" cy="100" r="75" stroke-width="8"/>
+                  <circle class="ring-fill" cx="100" cy="100" r="75" stroke-width="8"
+                    stroke-dasharray="471.24" data-percent="50" style="stroke-dashoffset:471.24"/>
+                  <!-- Cercle interne : Perso -->
+                  <circle class="ring-bg" cx="100" cy="100" r="60" stroke-width="8"/>
+                  <circle class="ring-fill" cx="100" cy="100" r="60" stroke-width="8"
+                    stroke-dasharray="376.99" data-percent="0" style="stroke-dashoffset:376.99"/>
+                </svg>
+                <div class="score-ring-center">
+                  <div class="score-ring-value">68</div>
+                  <div class="score-ring-label">Aujourd'hui</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Coins + Streak -->
+            <div class="card" style="display:flex;align-items:center;justify-content:space-between">
+              <div class="coins-display" style="flex-direction:row;gap:8px">
+                <svg class="coins-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>
+                <span class="coins-value" style="font-size:20px">1,247</span>
+              </div>
+              <div class="streak-display">
+                <svg class="streak-flame" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                <span class="streak-value">12</span>
+                <span class="streak-label">jours</span>
+              </div>
+            </div>
+
+            <!-- Evenements a venir -->
+            <div class="card">
+              <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;letter-spacing:0.05em">A venir aujourd'hui</div>
+              <div class="events-list">
+                <div class="event-item event-externe">
+                  <span class="event-time">10:30</span>
+                  <span class="event-titre">Call client Acme Corp</span>
+                </div>
+                <div class="event-item event-tao">
+                  <span class="event-time">12:30</span>
+                  <span class="event-titre">Tao · Appeler Lea</span>
+                </div>
+                <div class="event-item event-externe">
+                  <span class="event-time">14:00</span>
+                  <span class="event-titre">Reunion equipe design</span>
+                </div>
+                <div class="event-item event-tao">
+                  <span class="event-time">18:00</span>
+                  <span class="event-titre">Tao · Session HIIT</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Colonne droite : calendrier journee -->
+          <div class="aujourdhui-main">
+
+            <!-- Calendrier de la journee -->
+            <div class="day-timeline">
+              <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;letter-spacing:0.05em">Ma journee</div>
+              <div class="day-tl-body">
+                <div class="day-tl-hours">
+                  <span>8h</span><span>9h</span><span>10h</span><span>11h</span><span>12h</span><span>13h</span><span>14h</span><span>15h</span><span>16h</span><span>17h</span><span>18h</span><span>19h</span>
+                </div>
+                <div class="day-tl-lanes">
+                  <!-- Tao tasks -->
+                  <div class="day-tl-event day-tl-tao day-tl-done" style="top:9.09%;height:6.82%">
+                    <span class="day-tl-time">09:00</span> Dashboard Tao
+                  </div>
+                  <div class="day-tl-event day-tl-ext" style="top:22.73%;height:4.55%">
+                    <span class="day-tl-time">10:30</span> Call Acme Corp
+                  </div>
+                  <div class="day-tl-event day-tl-tao day-tl-active" style="top:40.91%;height:6.82%">
+                    <span class="day-tl-time">12:30</span> Appeler Lea
+                  </div>
+                  <div class="day-tl-event day-tl-ext" style="top:54.55%;height:9.09%">
+                    <span class="day-tl-time">14:00</span> Reunion design
+                  </div>
+                  <div class="day-tl-event day-tl-tao" style="top:90.91%;height:6.82%">
+                    <span class="day-tl-time">18:00</span> Session HIIT
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>

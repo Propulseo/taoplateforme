@@ -1,0 +1,170 @@
+            <div class="todo-view" id="todo-projet">
+              <div class="todo-project-header">
+                <div>
+                  <h2 id="todo-projet-titre">Lancement Tao</h2>
+                  <div class="todo-project-meta" id="todo-projet-meta">Taff - 23/40 taches - Echeance : J-45</div>
+                </div>
+                <div class="todo-view-switch">
+                  <button class="todo-view-switch-btn active" data-projet-vue="liste">Liste</button>
+                  <button class="todo-view-switch-btn" data-projet-vue="kanban">Kanban</button>
+                  <button class="todo-view-switch-btn disabled" title="Bientot">Calendrier</button>
+                </div>
+              </div>
+
+              <!-- Liste projet -->
+              <div class="todo-project-list" id="todo-projet-liste">
+                <div class="todo-section">
+                  <div class="todo-section-header">
+                    <svg class="todo-section-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+                    <span class="todo-section-title">En cours</span>
+                    <span class="todo-section-count" id="projet-encours-count">(4)</span>
+                  </div>
+                  <div class="todo-section-body">
+                    <div class="todo-list" id="projet-encours-list">
+                      <div class="todo-item">
+                        <div class="todo-checkbox"></div>
+                        <div class="todo-item-content"><span class="todo-item-titre">Finir le PRD</span></div>
+                        <div class="todo-item-right"><span class="todo-item-time">Aujourd'hui</span><span class="todo-item-tag tag-taff">Taff</span><span class="todo-item-menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></span></div>
+                      </div>
+                      <div class="todo-item">
+                        <div class="todo-checkbox"></div>
+                        <div class="todo-item-content"><span class="todo-item-titre">Setup Stripe</span></div>
+                        <div class="todo-item-right"><span class="todo-item-time">Demain</span><span class="todo-item-tag tag-taff">Taff</span><span class="todo-item-menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></span></div>
+                      </div>
+                      <div class="todo-item">
+                        <div class="todo-checkbox"></div>
+                        <div class="todo-item-content"><span class="todo-item-titre">Tester onboarding</span></div>
+                        <div class="todo-item-right"><span class="todo-item-tag tag-taff">Taff</span><span class="todo-item-menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></span></div>
+                      </div>
+                      <div class="todo-item">
+                        <div class="todo-checkbox"></div>
+                        <div class="todo-item-content"><span class="todo-item-titre">Video de lancement Insta</span></div>
+                        <div class="todo-item-right"><span class="todo-item-tag tag-taff">Taff</span><span class="todo-item-menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="todo-section">
+                  <div class="todo-section-header">
+                    <svg class="todo-section-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+                    <span class="todo-section-title">A venir</span>
+                    <span class="todo-section-count" id="projet-avenir-count">(8)</span>
+                  </div>
+                  <div class="todo-section-body">
+                    <div class="todo-list" id="projet-avenir-list">
+                      <div class="todo-item">
+                        <div class="todo-checkbox"></div>
+                        <div class="todo-item-content"><span class="todo-item-titre">Lancer beta privee</span></div>
+                        <div class="todo-item-right"><span class="todo-item-time">Lun 5 mai</span><span class="todo-item-tag tag-taff">Taff</span></div>
+                      </div>
+                      <div class="todo-item">
+                        <div class="todo-checkbox"></div>
+                        <div class="todo-item-content"><span class="todo-item-titre">Email aux 200 premiers</span></div>
+                        <div class="todo-item-right"><span class="todo-item-time">Mar 6 mai</span><span class="todo-item-tag tag-taff">Taff</span></div>
+                      </div>
+                      <div class="todo-item">
+                        <div class="todo-checkbox"></div>
+                        <div class="todo-item-content"><span class="todo-item-titre">Preparer le deck investisseurs</span></div>
+                        <div class="todo-item-right"><span class="todo-item-time">Mer 7 mai</span><span class="todo-item-tag tag-taff">Taff</span></div>
+                      </div>
+                      <div class="todo-item">
+                        <div class="todo-checkbox"></div>
+                        <div class="todo-item-content"><span class="todo-item-titre">Landing page V2</span></div>
+                        <div class="todo-item-right"><span class="todo-item-time">Jeu 8 mai</span><span class="todo-item-tag tag-taff">Taff</span></div>
+                      </div>
+                      <div class="todo-item">
+                        <div class="todo-checkbox"></div>
+                        <div class="todo-item-content"><span class="todo-item-titre">Setup analytics</span></div>
+                        <div class="todo-item-right"><span class="todo-item-tag tag-taff">Taff</span></div>
+                      </div>
+                      <div class="todo-item">
+                        <div class="todo-checkbox"></div>
+                        <div class="todo-item-content"><span class="todo-item-titre">Documentation API</span></div>
+                        <div class="todo-item-right"><span class="todo-item-tag tag-taff">Taff</span></div>
+                      </div>
+                      <div class="todo-item">
+                        <div class="todo-checkbox"></div>
+                        <div class="todo-item-content"><span class="todo-item-titre">Onboarding email sequence</span></div>
+                        <div class="todo-item-right"><span class="todo-item-tag tag-taff">Taff</span></div>
+                      </div>
+                      <div class="todo-item">
+                        <div class="todo-checkbox"></div>
+                        <div class="todo-item-content"><span class="todo-item-titre">Page pricing</span></div>
+                        <div class="todo-item-right"><span class="todo-item-tag tag-taff">Taff</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="todo-section todo-section-done">
+                  <div class="todo-section-header collapsed">
+                    <svg class="todo-section-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+                    <span class="todo-section-title">Terminees</span>
+                    <span class="todo-section-count" id="projet-done-count">(11)</span>
+                  </div>
+                  <div class="todo-section-body">
+                    <div class="todo-list" id="projet-done-list">
+                      <div class="todo-item fait"><div class="todo-checkbox checked"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="todo-item-content"><span class="todo-item-titre">Choisir le pricing</span></div></div>
+                      <div class="todo-item fait"><div class="todo-checkbox checked"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="todo-item-content"><span class="todo-item-titre">Designer le brand book</span></div></div>
+                      <div class="todo-item fait"><div class="todo-checkbox checked"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="todo-item-content"><span class="todo-item-titre">Setup Supabase</span></div></div>
+                      <div class="todo-item fait"><div class="todo-checkbox checked"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="todo-item-content"><span class="todo-item-titre">Creer le repo GitHub</span></div></div>
+                      <div class="todo-item fait"><div class="todo-checkbox checked"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="todo-item-content"><span class="todo-item-titre">Wireframes V1</span></div></div>
+                      <div class="todo-item fait"><div class="todo-checkbox checked"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="todo-item-content"><span class="todo-item-titre">Logo + mascotte</span></div></div>
+                      <div class="todo-item fait"><div class="todo-checkbox checked"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="todo-item-content"><span class="todo-item-titre">Nom de domaine</span></div></div>
+                      <div class="todo-item fait"><div class="todo-checkbox checked"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="todo-item-content"><span class="todo-item-titre">Architecture technique</span></div></div>
+                      <div class="todo-item fait"><div class="todo-checkbox checked"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="todo-item-content"><span class="todo-item-titre">PRD V1 brouillon</span></div></div>
+                      <div class="todo-item fait"><div class="todo-checkbox checked"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="todo-item-content"><span class="todo-item-titre">Benchmark concurrents</span></div></div>
+                      <div class="todo-item fait"><div class="todo-checkbox checked"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="todo-item-content"><span class="todo-item-titre">User interviews (5)</span></div></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="todo-section">
+                  <div class="todo-section-header collapsed">
+                    <svg class="todo-section-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+                    <span class="todo-section-title">Annulees</span>
+                    <span class="todo-section-count">(1)</span>
+                  </div>
+                  <div class="todo-section-body">
+                    <div class="todo-list">
+                      <div class="todo-item fait"><div class="todo-checkbox"></div><div class="todo-item-content"><span class="todo-item-titre" style="text-decoration:line-through">Integration Slack (reporte V2)</span></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Kanban projet -->
+              <div class="todo-kanban" id="todo-projet-kanban">
+                <div class="todo-kanban-column">
+                  <div class="todo-kanban-column-header">A faire <span>(8)</span></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Lancer beta privee</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span><span class="todo-kanban-card-date">Lun 5 mai</span></div></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Email aux 200 premiers</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span><span class="todo-kanban-card-date">Mar 6 mai</span></div></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Preparer le deck</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span><span class="todo-kanban-card-date">Mer 7 mai</span></div></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Landing page V2</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span><span class="todo-kanban-card-date">Jeu 8 mai</span></div></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Setup analytics</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span></div></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Documentation API</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span></div></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Onboarding email</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span></div></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Page pricing</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span></div></div>
+                </div>
+                <div class="todo-kanban-column">
+                  <div class="todo-kanban-column-header">En cours <span>(4)</span></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Finir le PRD</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span><span class="todo-kanban-card-date">Aujourd'hui</span></div></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Setup Stripe</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span><span class="todo-kanban-card-date">Demain</span></div></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Tester onboarding</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span></div></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Video de lancement</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span></div></div>
+                </div>
+                <div class="todo-kanban-column">
+                  <div class="todo-kanban-column-header">Fait <span>(11)</span></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Choisir le pricing</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span></div></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Designer le brand book</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span></div></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Setup Supabase</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span></div></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Creer le repo</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span></div></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title">Wireframes V1</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span></div></div>
+                </div>
+                <div class="todo-kanban-column">
+                  <div class="todo-kanban-column-header">Annule <span>(1)</span></div>
+                  <div class="todo-kanban-card"><div class="todo-kanban-card-title" style="text-decoration:line-through;opacity:0.5">Integration Slack</div><div class="todo-kanban-card-footer"><span class="todo-item-tag tag-taff">Taff</span></div></div>
+                </div>
+              </div>
+            </div>

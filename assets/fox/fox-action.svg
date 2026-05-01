@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" fill="none">
+  <!-- Placeholder Fox - Pose Action (geste vif, decide) -->
+  <!-- Socle holographique (plus intense) -->
+  <ellipse cx="100" cy="245" rx="65" ry="14" fill="#3DFF70" opacity="0.2"/>
+  <ellipse cx="100" cy="245" rx="45" ry="9" fill="#3DFF70" opacity="0.35"/>
+
+  <!-- Corps dynamique -->
+  <path d="M68 140 L65 210 Q65 230 85 230 L115 230 Q135 230 135 210 L132 140 Z"
+        stroke="#3DFF70" stroke-width="1.5" fill="none" opacity="0.8"/>
+
+  <!-- Bras leve (geste vif) -->
+  <path d="M65 155 L45 145 L35 110 Q33 105 38 103 L42 105"
+        stroke="#3DFF70" stroke-width="2" fill="none" opacity="0.8"/>
+  <path d="M135 160 L150 175 Q155 178 152 183 L145 185"
+        stroke="#3DFF70" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+  <!-- Tete -->
+  <path d="M70 78 Q70 53 100 48 Q130 53 130 78 L130 118 Q130 138 100 140 Q70 138 70 118 Z"
+        stroke="#3DFF70" stroke-width="1.5" fill="none"/>
+
+  <!-- Oreilles (dressees, alertes) -->
+  <path d="M72 78 L55 28 L82 63" stroke="#3DFF70" stroke-width="1.5" fill="none"/>
+  <path d="M128 78 L145 28 L118 63" stroke="#3DFF70" stroke-width="1.5" fill="none"/>
+
+  <!-- Yeux (determines) -->
+  <circle cx="85" cy="93" r="5.5" fill="#3DFF70"/>
+  <circle cx="115" cy="93" r="5.5" fill="#3DFF70"/>
+
+  <!-- Museau (leger sourire) -->
+  <path d="M92 108 L100 114 L108 108" stroke="#3DFF70" stroke-width="1.5" fill="none"/>
+  <circle cx="100" cy="106" r="2" fill="#3DFF70"/>
+  <path d="M88 114 Q100 120 112 114" stroke="#3DFF70" stroke-width="1" fill="none" opacity="0.5"/>
+
+  <!-- Lignes d'energie -->
+  <line x1="25" y1="95" x2="15" y2="90" stroke="#3DFF70" stroke-width="1.5" opacity="0.4"/>
+  <line x1="28" y1="105" x2="18" y2="107" stroke="#3DFF70" stroke-width="1.5" opacity="0.3"/>
+  <line x1="27" y1="85" x2="20" y2="80" stroke="#3DFF70" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Glow renforce -->
+  <circle cx="85" cy="93" r="10" fill="#3DFF70" opacity="0.12"/>
+  <circle cx="115" cy="93" r="10" fill="#3DFF70" opacity="0.12"/>
+</svg>

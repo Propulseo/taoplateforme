@@ -1,0 +1,137 @@
+            <div class="todo-view active" id="todo-aujourdhui">
+              <div class="todo-view-header">
+                <div>
+                  <h2>Aujourd'hui</h2>
+                  <div class="todo-view-subtitle">Jeudi 1 mai - 11 taches</div>
+                </div>
+                <div class="todo-filter-bar">
+                  <button class="todo-filter-btn filter-all active" data-filter-pilier="all">Tous</button>
+                  <button class="todo-filter-btn" data-filter-pilier="taff">Taff</button>
+                  <button class="todo-filter-btn" data-filter-pilier="vie">Vie</button>
+                  <button class="todo-filter-btn" data-filter-pilier="perso">Perso</button>
+                </div>
+              </div>
+
+              <!-- Priorites (lecture seule) -->
+              <div class="todo-priorities">
+                <div class="todo-priorities-label">TES 3 PRIORITES - LECTURE SEULE</div>
+                <div class="todo-list">
+                  <div class="todo-item">
+                    <div class="todo-checkbox"></div>
+                    <div class="todo-item-content"><span class="todo-item-titre">Finir le PRD Tao</span></div>
+                    <div class="todo-item-right">
+                      <span class="todo-item-tag tag-taff">Taff</span>
+                      <span class="todo-item-time">10:00 - 10:45</span>
+                      <span class="todo-item-status status-en-cours">en cours</span>
+                    </div>
+                  </div>
+                  <div class="todo-item">
+                    <div class="todo-checkbox"></div>
+                    <div class="todo-item-content"><span class="todo-item-titre">Appeler ma mere</span></div>
+                    <div class="todo-item-right">
+                      <span class="todo-item-tag tag-vie">Vie</span>
+                      <span class="todo-item-time">14:00 - 14:45</span>
+                    </div>
+                  </div>
+                  <div class="todo-item">
+                    <div class="todo-checkbox"></div>
+                    <div class="todo-item-content"><span class="todo-item-titre">Sport 30min</span></div>
+                    <div class="todo-item-right">
+                      <span class="todo-item-tag tag-perso">Perso</span>
+                      <span class="todo-item-time">18:00 - 18:45</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="todo-priorities-footer">
+                  <a onclick="navigateTo('aujourdhui')">Modifier sur la page Aujourd'hui &rarr;</a>
+                </div>
+              </div>
+
+              <!-- Aussi aujourd'hui -->
+              <div class="todo-section">
+                <div class="todo-section-header">
+                  <svg class="todo-section-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+                  <span class="todo-section-title">Aussi aujourd'hui</span>
+                  <span class="todo-section-count">(3)</span>
+                </div>
+                <div class="todo-section-body">
+                  <div class="todo-list">
+                    <div class="todo-item">
+                      <div class="todo-checkbox"></div>
+                      <div class="todo-item-content"><span class="todo-item-titre">Relire le contrat client</span></div>
+                      <div class="todo-item-right">
+                        <span class="todo-item-tag tag-taff">Taff</span>
+                        <span class="todo-item-menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></span>
+                      </div>
+                    </div>
+                    <div class="todo-item">
+                      <div class="todo-checkbox"></div>
+                      <div class="todo-item-content"><span class="todo-item-titre">Repondre aux 5 emails</span></div>
+                      <div class="todo-item-right">
+                        <span class="todo-item-tag tag-taff">Taff</span>
+                        <span class="todo-item-menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></span>
+                      </div>
+                    </div>
+                    <div class="todo-item">
+                      <div class="todo-checkbox"></div>
+                      <div class="todo-item-content"><span class="todo-item-titre">Preparer la reunion de demain</span></div>
+                      <div class="todo-item-right">
+                        <span class="todo-item-tag tag-taff">Taff</span>
+                        <span class="todo-item-menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Ce soir -->
+              <div class="todo-section">
+                <div class="todo-section-header">
+                  <svg class="todo-section-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+                  <span class="todo-section-title">Ce soir</span>
+                  <span class="todo-section-count">(2)</span>
+                </div>
+                <div class="todo-section-body">
+                  <div class="todo-list">
+                    <div class="todo-item">
+                      <div class="todo-checkbox"></div>
+                      <div class="todo-item-content"><span class="todo-item-titre">Acheter les courses</span></div>
+                      <div class="todo-item-right">
+                        <span class="todo-item-tag tag-vie">Vie</span>
+                        <span class="todo-item-menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></span>
+                      </div>
+                    </div>
+                    <div class="todo-item">
+                      <div class="todo-checkbox"></div>
+                      <div class="todo-item-content"><span class="todo-item-titre">Lire 30 min</span></div>
+                      <div class="todo-item-right">
+                        <span class="todo-item-tag tag-perso">Perso</span>
+                        <span class="todo-item-menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- En retard -->
+              <div class="todo-section-overdue">
+                <div class="todo-section-header">
+                  <svg class="todo-section-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+                  <span class="todo-section-title">En retard</span>
+                  <span class="todo-section-count">(1)</span>
+                </div>
+                <div class="todo-section-body">
+                  <div class="todo-list">
+                    <div class="todo-item">
+                      <div class="todo-checkbox"></div>
+                      <div class="todo-item-content"><span class="todo-item-titre">Envoyer la facture a Clement</span></div>
+                      <div class="todo-item-right">
+                        <span class="todo-item-status status-overdue">2 jours</span>
+                        <span class="todo-item-tag tag-taff">Taff</span>
+                        <span class="todo-item-menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>

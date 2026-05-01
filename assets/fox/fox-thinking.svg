@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" fill="none">
+  <!-- Placeholder Fox - Pose Reflexion (accroupi, pensif) -->
+  <!-- Socle holographique -->
+  <ellipse cx="100" cy="245" rx="60" ry="12" fill="#3DFF70" opacity="0.15"/>
+  <ellipse cx="100" cy="245" rx="40" ry="8" fill="#3DFF70" opacity="0.25"/>
+
+  <!-- Corps accroupi -->
+  <path d="M70 170 L70 215 Q70 235 90 235 L110 235 Q130 235 130 215 L130 170 Z"
+        stroke="#3DFF70" stroke-width="1.5" fill="none" opacity="0.8"/>
+
+  <!-- Bras pensif (main au menton) -->
+  <path d="M70 185 L55 190 Q50 192 52 197 L60 200"
+        stroke="#3DFF70" stroke-width="1.5" fill="none" opacity="0.6"/>
+  <path d="M130 180 L140 165 L135 140 L128 135"
+        stroke="#3DFF70" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+  <!-- Tete (legerement inclinee) -->
+  <path d="M72 95 Q72 70 102 65 Q132 70 132 95 L132 130 Q132 150 102 152 Q72 150 72 130 Z"
+        stroke="#3DFF70" stroke-width="1.5" fill="none"/>
+
+  <!-- Oreilles -->
+  <path d="M74 95 L60 50 L84 80" stroke="#3DFF70" stroke-width="1.5" fill="none"/>
+  <path d="M130 95 L144 50 L120 80" stroke="#3DFF70" stroke-width="1.5" fill="none"/>
+
+  <!-- Yeux (regard vers le haut) -->
+  <circle cx="87" cy="108" r="4.5" fill="#3DFF70"/>
+  <circle cx="117" cy="108" r="4.5" fill="#3DFF70"/>
+  <!-- Reflet dans les yeux -->
+  <circle cx="89" cy="106" r="1.5" fill="#060809"/>
+  <circle cx="119" cy="106" r="1.5" fill="#060809"/>
+
+  <!-- Museau -->
+  <path d="M95 122 L102 127 L109 122" stroke="#3DFF70" stroke-width="1.5" fill="none"/>
+  <circle cx="102" cy="120" r="2" fill="#3DFF70"/>
+
+  <!-- Points de reflexion -->
+  <circle cx="150" cy="80" r="3" fill="#3DFF70" opacity="0.3"/>
+  <circle cx="158" cy="72" r="2" fill="#3DFF70" opacity="0.2"/>
+  <circle cx="163" cy="65" r="1.5" fill="#3DFF70" opacity="0.15"/>
+</svg>

@@ -1,0 +1,105 @@
+        <div class="semaine-header-bar">
+          <button class="btn-ghost">←</button>
+          <h3>Semaine 18 · 28 avril — 4 mai 2026</h3>
+          <button class="btn-ghost">→</button>
+        </div>
+
+        <!-- Grille calendrier -->
+        <div class="semaine-grid">
+          <div class="semaine-hours">
+            <div class="semaine-hour">8h</div>
+            <div class="semaine-hour">9h</div>
+            <div class="semaine-hour">10h</div>
+            <div class="semaine-hour">11h</div>
+            <div class="semaine-hour">12h</div>
+            <div class="semaine-hour">13h</div>
+            <div class="semaine-hour">14h</div>
+            <div class="semaine-hour">15h</div>
+            <div class="semaine-hour">16h</div>
+            <div class="semaine-hour">17h</div>
+            <div class="semaine-hour">18h</div>
+            <div class="semaine-hour">19h</div>
+          </div>
+          <div class="semaine-days">
+            <div class="semaine-day-header">Lun 28</div>
+            <div class="semaine-day-header">Mar 29</div>
+            <div class="semaine-day-header">Mer 30</div>
+            <div class="semaine-day-header aujourdhui-marker">Jeu 1</div>
+            <div class="semaine-day-header">Ven 2</div>
+            <div class="semaine-day-header">Sam 3</div>
+            <div class="semaine-day-header">Dim 4</div>
+          </div>
+          <div class="semaine-body">
+            <!-- Plages Tao (positionnees en CSS grid) -->
+            <div class="semaine-plage plage-tao" style="grid-column:4;grid-row:2/span 1">
+              <span class="plage-label">Tao · Dashboard</span>
+            </div>
+            <div class="semaine-plage plage-externe" style="grid-column:4;grid-row:3/span 1">
+              <span class="plage-label">Call Acme</span>
+            </div>
+            <div class="semaine-plage plage-tao" style="grid-column:4;grid-row:5/span 1">
+              <span class="plage-label">Tao · Appeler Lea</span>
+            </div>
+            <div class="semaine-plage plage-externe" style="grid-column:4;grid-row:7/span 1">
+              <span class="plage-label">Reunion design</span>
+            </div>
+            <div class="semaine-plage plage-tao" style="grid-column:4;grid-row:11/span 1">
+              <span class="plage-label">Tao · HIIT</span>
+            </div>
+            <!-- Quelques plages sur d'autres jours -->
+            <div class="semaine-plage plage-tao" style="grid-column:1;grid-row:2/span 1">
+              <span class="plage-label">Tao · Code API</span>
+            </div>
+            <div class="semaine-plage plage-tao" style="grid-column:1;grid-row:5/span 1">
+              <span class="plage-label">Tao · Lea</span>
+            </div>
+            <div class="semaine-plage plage-tao" style="grid-column:1;grid-row:11/span 1">
+              <span class="plage-label">Tao · Course</span>
+            </div>
+            <div class="semaine-plage plage-tao" style="grid-column:3;grid-row:3/span 1">
+              <span class="plage-label">Tao · PRD</span>
+            </div>
+            <div class="semaine-plage plage-externe" style="grid-column:5;grid-row:2/span 2">
+              <span class="plage-label">Workshop UX</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats semaine -->
+        <div class="semaine-stats">
+          <div class="card">
+            <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px">Scores 7 jours</div>
+            <div class="mini-graph">
+              <div class="mini-graph-bar" style="height:85%"><span>85</span></div>
+              <div class="mini-graph-bar" style="height:62%"><span>62</span></div>
+              <div class="mini-graph-bar" style="height:78%"><span>78</span></div>
+              <div class="mini-graph-bar active" style="height:91%"><span>91</span></div>
+              <div class="mini-graph-bar" style="height:68%"><span>68</span></div>
+              <div class="mini-graph-bar" style="height:45%"><span>45</span></div>
+              <div class="mini-graph-bar" style="height:55%"><span>55</span></div>
+            </div>
+            <div class="mini-graph-labels">
+              <span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span>
+            </div>
+          </div>
+          <div class="card">
+            <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px">Repartition</div>
+            <div class="repartition-list">
+              <div class="repartition-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+                <span>12 Taff</span>
+                <div class="repartition-bar"><div class="repartition-fill" style="width:63%"></div></div>
+              </div>
+              <div class="repartition-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                <span>4 Vie</span>
+                <div class="repartition-bar"><div class="repartition-fill" style="width:21%"></div></div>
+              </div>
+              <div class="repartition-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                <span>3 Perso</span>
+                <div class="repartition-bar"><div class="repartition-fill" style="width:16%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>

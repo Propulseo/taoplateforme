@@ -1,0 +1,146 @@
+/* ═══════════════════════════════════════════
+   TAO — Page Recompenses
+   ═══════════════════════════════════════════ */
+
+.recompenses-hero {
+  text-align: center;
+  padding: var(--space-xl);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-lg);
+  background: var(--bg-elevated);
+}
+
+.recompenses-coins-value {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 64px;
+  color: var(--neon);
+  margin: var(--space-md) 0 var(--space-xs);
+  line-height: 1;
+}
+
+.recompenses-coins-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.recompenses-niveau {
+  margin-top: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Boutique */
+.boutique-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-md);
+}
+
+.boutique-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.boutique-item h4 {
+  font-family: var(--font-display);
+}
+
+/* Badges */
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-md);
+}
+
+.badge-card {
+  text-align: center;
+  padding: var(--space-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+}
+
+.badge-card.debloque {
+  border-color: var(--border-hover);
+}
+
+.badge-card.debloque:hover {
+  border-color: var(--neon);
+  box-shadow: var(--neon-glow);
+  transform: translateY(-2px);
+}
+
+.badge-card.verrouille {
+  opacity: 0.4;
+}
+
+.badge-icon {
+  font-size: 36px;
+  margin-bottom: var(--space-sm);
+  line-height: 1;
+}
+
+.badge-card.verrouille .badge-icon {
+  filter: grayscale(1);
+}
+
+.badge-nom {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.badge-desc {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.badge-lock {
+  margin-top: var(--space-sm);
+  font-size: 14px;
+}
+
+.badge-coins {
+  margin-top: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--neon);
+}
+
+/* Streak hero */
+.streak-hero {
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.streak-hero-value {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 96px;
+  color: var(--text);
+  line-height: 1;
+  margin: var(--space-md) 0 var(--space-xs);
+}
+
+.streak-hero-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}

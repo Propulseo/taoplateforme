@@ -1,0 +1,48 @@
+/* ═══════════════════════════════════════════
+   TAO — Page Bilan
+   ═══════════════════════════════════════════ */
+
+.bilan-flow {
+  max-width: 600px;
+  margin: 0 0 var(--space-2xl);
+  text-align: center;
+}
+
+.bilan-step h3 {
+  font-size: var(--text-h3);
+  text-align: left;
+}
+
+.bilan-step p {
+  text-align: left;
+}
+
+.bilan-textarea {
+  width: 100%;
+  min-height: 100px;
+  resize: vertical;
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.bilan-step .btn-primary {
+  width: 100%;
+  justify-content: center;
+}
+
+.bilan-historique {
+  max-width: 600px;
+  margin: 0;
+}
+
+.bilan-card {
+  margin-bottom: var(--space-md);
+}
+
+.bilan-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
