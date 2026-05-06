@@ -618,15 +618,21 @@
   color: var(--text-muted);
 }
 
-/* ── Now-line ── */
+/* ── Now-line (today's column only) ── */
 .semaine-now-line {
+  position: relative;
+  height: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.semaine-now-line::after {
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
   height: 2px;
   background: #ff4444;
-  z-index: 10;
-  pointer-events: none;
 }
 
 .semaine-now-line::before {
@@ -638,6 +644,7 @@
   height: 8px;
   border-radius: 50%;
   background: #ff4444;
+  z-index: 11;
 }
 
 /* ── Plage tooltip ── */

@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initSidebarToggle();
   initMobileToggle();
+  initSidebarPolish();
+  initHeaderPolish();
 
   // Global event delegation (works on any future DOM)
   initCheckboxes();
@@ -83,6 +85,7 @@ async function navigateTo(pageId) {
 async function initPageContent(pageId) {
   switch (pageId) {
     case 'aujourdhui':
+      afficherMessageAccueil();
       initScoreRing();
       initRingPulse();
       initCountdown();
@@ -92,6 +95,7 @@ async function initPageContent(pageId) {
       initBanniereObjectifs();
       initFocusButtons();
       initTacheMenus();
+      initDebugMessages();
       break;
     case 'chat':
       initChatAutoScroll();
@@ -1153,17 +1157,27 @@ function escapeHTML(str) {
   return div.innerHTML;
 }
 
-/* ── Semaine: Red now-line at current time ── */
+/* ── Semaine: Red now-line at current time (only on today's column) ── */
 function initNowLine() {
   const body = document.querySelector('.semaine-body');
   if (!body) return;
   const now = new Date();
   const hour = now.getHours(), min = now.getMinutes();
   if (hour < 8 || hour > 19) return;
+
+  const headers = document.querySelectorAll('.semaine-day-header');
+  let todayCol = 0;
+  headers.forEach((h, i) => {
+    if (h.classList.contains('aujourdhui-marker')) todayCol = i + 1;
+  });
+  if (!todayCol) return;
+
   const offset = ((hour - 8) + min / 60) * 50;
   const line = document.createElement('div');
   line.className = 'semaine-now-line';
   line.style.top = offset + 'px';
+  line.style.gridColumn = todayCol;
+  line.style.gridRow = '1 / -1';
   body.appendChild(line);
 }
 
@@ -1769,5 +1783,89 @@ function initSemainePlageClick() {
       const p = document.querySelector('.plage-detail-panel');
       if (p) { p.classList.remove('open'); setTimeout(() => p.remove(), 200); }
     }
+  });
+}
+
+/* ══════════════════════════════════════════════
+   SIDEBAR / HEADER — Polish
+   ══════════════════════════════════════════════ */
+
+/* ── Sidebar: active indicator slide + hover glow ── */
+function initSidebarPolish() {
+  const nav = document.querySelector('.sidebar-nav');
+  if (!nav) return;
+
+  // Active indicator bar
+  const indicator = document.createElement('div');
+  indicator.className = 'sidebar-indicator';
+  nav.style.position = 'relative';
+  nav.appendChild(indicator);
+
+  function moveIndicator() {
+    const active = nav.querySelector('.sidebar-nav-item.active');
+    if (!active) return;
+    indicator.style.top = active.offsetTop + 'px';
+    indicator.style.height = active.offsetHeight + 'px';
+  }
+  moveIndicator();
+
+  // Observe page changes
+  on('page-changed', moveIndicator);
+
+  // Emit page-changed from navigateTo wrapper
+  const origNavigateTo = window.navigateTo;
+  window.navigateTo = async function(pageId) {
+    await origNavigateTo(pageId);
+    emit('page-changed', pageId);
+  };
+
+  // Hover glow
+  nav.querySelectorAll('.sidebar-nav-item').forEach(item => {
+    item.addEventListener('mouseenter', () => item.classList.add('glow'));
+    item.addEventListener('mouseleave', () => item.classList.remove('glow'));
+  });
+
+  // Bottom nav tap feedback
+  document.querySelectorAll('.bottom-nav-item').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.add('tap');
+      item.addEventListener('animationend', () => item.classList.remove('tap'), { once: true });
+    });
+  });
+}
+
+/* ── Header: coins pulse + avatar dropdown ── */
+function initHeaderPolish() {
+  // Coins pulse on update
+  on('coins-updated', () => {
+    const el = document.querySelector('.header-coins');
+    if (!el) return;
+    el.classList.add('pulse');
+    el.addEventListener('animationend', () => el.classList.remove('pulse'), { once: true });
+  });
+
+  // Avatar dropdown
+  const avatar = document.querySelector('.header-avatar');
+  if (!avatar) return;
+  avatar.style.cursor = 'pointer';
+  avatar.addEventListener('click', () => {
+    let dd = document.querySelector('.avatar-dropdown');
+    if (dd) { dd.remove(); return; }
+    dd = document.createElement('div');
+    dd.className = 'avatar-dropdown';
+    dd.innerHTML = '<div class="avatar-dd-item" data-page="reglages">Reglages</div>'
+      + '<div class="avatar-dd-item avatar-dd-logout">Deconnexion</div>';
+    avatar.parentElement.appendChild(dd);
+    requestAnimationFrame(() => dd.classList.add('open'));
+    dd.querySelector('[data-page="reglages"]').addEventListener('click', () => { dd.remove(); navigateTo('reglages'); });
+    dd.querySelector('.avatar-dd-logout').addEventListener('click', () => { dd.remove(); showToast('Deconnecte (demo)', 'success'); });
+    setTimeout(() => {
+      document.addEventListener('click', function handler(ev) {
+        if (!ev.target.closest('.avatar-dropdown') && !ev.target.closest('.header-avatar')) {
+          dd?.remove();
+          document.removeEventListener('click', handler);
+        }
+      });
+    }, 0);
   });
 }

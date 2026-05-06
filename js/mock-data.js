@@ -16,11 +16,20 @@ const TAO_DATA = {
     xpNextLevel: 7500,
     streak: 12,
     bestStreak: 23,
+    joursActifs: 52,
+    aDejaFait3sur3: true,
     createdAt: '2026-03-15',
     heureDebut: '08:00',
     heureFin: '19:00',
     notifMatin: '07:15',
     notifSoir: '21:30',
+  },
+
+  // ── Donnees d'hier (pour messages contextuels) ──
+  hier: {
+    score: 78,
+    tachesFaites: 3,
+    joursAbsence: 0,
   },
 
   // ── 3 Objectifs trimestriels ──
