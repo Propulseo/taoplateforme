@@ -71,7 +71,7 @@ async function navigateTo(pageId) {
   // Update header title
   const titles = {
     'aujourdhui': "Aujourd'hui", 'chat': 'Chat', 'todo': 'Todo',
-    'semaine': 'Semaine', 'trimestre': 'Trimestre', 'bilan': 'Bilan',
+    'semaine': 'Calendrier', 'trimestre': 'Trimestre', 'bilan': 'Bilan',
     'recompenses': 'Recompenses', 'reglages': 'Reglages',
   };
   const headerTitle = document.querySelector('.header-page-title');
@@ -108,11 +108,7 @@ async function initPageContent(pageId) {
       await loadTodoView('todo-aujourdhui');
       break;
     case 'semaine':
-      initNowLine();
-      initPlageTooltips();
-      initPlageDragMove();
-      initHeatmap();
-      initSemainePlageClick();
+      initCalPageModeSwitch();
       break;
     case 'trimestre':
       initTrimestreProgress();
@@ -152,10 +148,8 @@ async function initPageContent(pageId) {
 
 const _todoViewMap = {
   'todo-aujourdhui': 'aujourdhui',
-  'todo-avenir': 'avenir',
-  'todo-boite': 'boite',
+  'todo-pasurgent': 'pasurgent',
   'todo-attente': 'en-attente',
-  'todo-longterme': 'long-terme',
   'todo-projet': 'projet',
 };
 
@@ -448,14 +442,41 @@ function initTodoProjetSwitch() {
 
     const liste = document.getElementById('todo-projet-liste');
     const kanban = document.getElementById('todo-projet-kanban');
+    const calendrier = document.getElementById('todo-projet-calendrier');
 
     if (vue === 'liste') {
       liste?.classList.remove('hidden');
       kanban?.classList.remove('active');
+      calendrier?.classList.remove('active');
     } else if (vue === 'kanban') {
       liste?.classList.add('hidden');
       kanban?.classList.add('active');
+      calendrier?.classList.remove('active');
+    } else if (vue === 'calendrier') {
+      liste?.classList.add('hidden');
+      kanban?.classList.remove('active');
+      calendrier?.classList.add('active');
     }
+  });
+
+  // Calendar mode switch (daily / weekly / monthly)
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.todo-cal-mode-btn');
+    if (!btn) return;
+    const mode = btn.dataset.calMode;
+    if (!mode) return;
+
+    btn.closest('.todo-cal-mode-switch').querySelectorAll('.todo-cal-mode-btn').forEach(b => {
+      b.classList.toggle('active', b === btn);
+    });
+
+    const daily = document.getElementById('cal-daily');
+    const weekly = document.getElementById('cal-weekly');
+    const monthly = document.getElementById('cal-monthly');
+
+    daily?.classList.toggle('active', mode === 'daily');
+    weekly?.classList.toggle('active', mode === 'weekly');
+    monthly?.classList.toggle('active', mode === 'monthly');
   });
 }
 
@@ -797,9 +818,8 @@ function initTodoAddedListener() {
 function updateTodoSidebarCounts() {
   const counts = {
     'todo-aujourdhui': (state.todos.priorites?.length || 0) + (state.todos.aujourdhui?.length || 0) + (state.todos.ceSoir?.length || 0) + (state.todos.enRetard?.length || 0),
-    'todo-boite': state.todos.boite?.length || 0,
+    'todo-pasurgent': (state.todos.boite?.length || 0) + (state.todos.longTerme?.length || 0),
     'todo-attente': state.todos.enAttente?.length || 0,
-    'todo-longterme': state.todos.longTerme?.length || 0,
   };
   for (const [viewId, count] of Object.entries(counts)) {
     const item = document.querySelector('[data-todo-view="' + viewId + '"] .todo-sidebar-count');
@@ -1783,6 +1803,34 @@ function initSemainePlageClick() {
       const p = document.querySelector('.plage-detail-panel');
       if (p) { p.classList.remove('open'); setTimeout(() => p.remove(), 200); }
     }
+  });
+}
+
+/* ── Calendrier page: mode switch (daily/weekly/monthly) ── */
+function initCalPageModeSwitch() {
+  const container = document.getElementById('page-semaine');
+  if (!container) return;
+
+  container.addEventListener('click', (e) => {
+    const btn = e.target.closest('.todo-cal-mode-btn');
+    if (!btn) return;
+    const mode = btn.dataset.calPageMode;
+    if (!mode) return;
+
+    const switchEl = btn.closest('.todo-cal-mode-switch');
+    if (switchEl) {
+      switchEl.querySelectorAll('.todo-cal-mode-btn').forEach(b => {
+        b.classList.toggle('active', b === btn);
+      });
+    }
+
+    const daily = container.querySelector('#cal-page-daily');
+    const weekly = container.querySelector('#cal-page-weekly');
+    const monthly = container.querySelector('#cal-page-monthly');
+
+    daily?.classList.toggle('active', mode === 'daily');
+    weekly?.classList.toggle('active', mode === 'weekly');
+    monthly?.classList.toggle('active', mode === 'monthly');
   });
 }
 

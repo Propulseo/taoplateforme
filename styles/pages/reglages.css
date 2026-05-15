@@ -3,10 +3,10 @@
    ═══════════════════════════════════════════ */
 
 .reglages-sections {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-md);
-  max-width: 700px;
+  align-items: start;
 }
 
 .reglage-section {
@@ -80,6 +80,10 @@
 }
 
 @media (max-width: 768px) {
+  .reglages-sections {
+    grid-template-columns: 1fr;
+  }
+
   .reglage-row {
     flex-direction: column;
     align-items: flex-start;

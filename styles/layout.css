@@ -292,6 +292,7 @@
 .main-wrapper {
   flex: 1;
   margin-left: var(--sidebar-width);
+  padding-top: var(--header-height);
   transition: margin-left var(--transition-panel);
 }
 
@@ -300,7 +301,7 @@
 }
 
 .main-content {
-  padding: calc(var(--header-height) + 24px) 24px 24px;
+  padding: 24px;
 }
 
 /* ── Page sections ── */

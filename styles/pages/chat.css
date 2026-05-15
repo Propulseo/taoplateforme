@@ -5,8 +5,19 @@
 .chat-container {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - var(--header-height) - var(--space-lg) * 2);
-  max-height: 800px;
+  height: calc(100vh - var(--header-height) - 24px - 24px);
+  overflow: hidden;
+}
+
+/* Empêcher tout scroll sur la page chat */
+html:has(#page-chat.active),
+html:has(#page-chat.active) body,
+html:has(#page-chat.active) .app,
+html:has(#page-chat.active) .main-wrapper,
+html:has(#page-chat.active) .main-content,
+html:has(#page-chat.active) #page-chat {
+  overflow: hidden;
+  height: 100vh;
 }
 
 .chat-header {

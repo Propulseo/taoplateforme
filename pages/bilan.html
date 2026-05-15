@@ -1,53 +1,224 @@
-        <div class="bilan-flow">
-          <div class="fox-mascot" style="margin-bottom:24px">
-            <img src="assets/fox/fox-thinking.svg" alt="Tao" style="height:100px">
-          </div>
-
-          <div class="bilan-step active" data-step="1">
-            <h3>Qu'est-ce que tu as accompli cette semaine que tu n'avais pas prevu ?</h3>
-            <p class="text-muted" style="margin:8px 0 16px;font-size:13px">Les choses que tu n'avais pas mises sur ta liste mais qui ont compte.</p>
-            <textarea class="bilan-textarea" rows="4" placeholder="Ecris ici..."></textarea>
-            <button class="btn-primary" style="margin-top:16px">Continuer →</button>
-          </div>
-
-          <div class="bilan-step" data-step="2" style="display:none">
-            <h3>Ou est passe ton temps que tu n'as pas choisi de donner ?</h3>
-            <textarea class="bilan-textarea" rows="4" placeholder="Ecris ici..." style="margin-top:16px"></textarea>
-            <button class="btn-primary" style="margin-top:16px">Continuer →</button>
-          </div>
-
-          <div class="bilan-step" data-step="3" style="display:none">
-            <h3>Une chose que tu vas faire differemment la semaine prochaine ?</h3>
-            <textarea class="bilan-textarea" rows="4" placeholder="Ecris ici..." style="margin-top:16px"></textarea>
-            <button class="btn-primary" style="margin-top:16px">Terminer le bilan</button>
-          </div>
+        <!-- Bilan header -->
+        <div class="bilan-header">
+          <span class="bilan-week-label">Semaine 18 · 28 avril — 4 mai 2026</span>
+          <span class="tag tag-active">En cours</span>
         </div>
 
-        <!-- Historique bilans -->
+        <div class="bilan-grid">
+
+          <!-- Colonne gauche : synthese semaine -->
+          <div class="bilan-synthese">
+
+            <!-- Score semaine -->
+            <div class="card bilan-score-card">
+              <div class="bilan-score-top">
+                <div>
+                  <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--text-muted);letter-spacing:0.05em">Score semaine</div>
+                  <div class="bilan-score-value">74</div>
+                </div>
+                <div class="bilan-trend bilan-trend-up">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l5-5 5 5"/><path d="M7 7l5 5 5-5"/></svg>
+                  <span>+6 vs S17</span>
+                </div>
+              </div>
+              <div class="bilan-sparkline">
+                <div class="bilan-spark-bar" style="height:55%"><span>61</span></div>
+                <div class="bilan-spark-bar" style="height:62%"><span>68</span></div>
+                <div class="bilan-spark-bar" style="height:66%"><span>72</span></div>
+                <div class="bilan-spark-bar active" style="height:68%"><span>74</span></div>
+              </div>
+              <div class="bilan-spark-labels">
+                <span>S15</span><span>S16</span><span>S17</span><span>S18</span>
+              </div>
+            </div>
+
+            <!-- Stats rapides -->
+            <div class="bilan-stats-row">
+              <div class="card bilan-stat-mini">
+                <div class="bilan-stat-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div class="bilan-stat-number">19</div>
+                <div class="bilan-stat-label">taches faites</div>
+              </div>
+              <div class="card bilan-stat-mini">
+                <div class="bilan-stat-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="bilan-stat-number">14h</div>
+                <div class="bilan-stat-label">focus total</div>
+              </div>
+              <div class="card bilan-stat-mini">
+                <div class="bilan-stat-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                </div>
+                <div class="bilan-stat-number">12j</div>
+                <div class="bilan-stat-label">streak</div>
+              </div>
+            </div>
+
+            <!-- Repartition -->
+            <div class="card">
+              <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;letter-spacing:0.05em">Repartition</div>
+              <div class="bilan-repartition">
+                <div class="bilan-rep-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+                  <span class="bilan-rep-label">Taff</span>
+                  <span class="bilan-rep-count">10</span>
+                  <div class="bilan-rep-bar"><div class="bilan-rep-fill" style="width:53%"></div></div>
+                </div>
+                <div class="bilan-rep-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                  <span class="bilan-rep-label">Vie</span>
+                  <span class="bilan-rep-count">5</span>
+                  <div class="bilan-rep-bar"><div class="bilan-rep-fill" style="width:26%"></div></div>
+                </div>
+                <div class="bilan-rep-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--neon)" stroke-width="1.5"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                  <span class="bilan-rep-label">Perso</span>
+                  <span class="bilan-rep-count">4</span>
+                  <div class="bilan-rep-bar"><div class="bilan-rep-fill" style="width:21%"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Top victoires -->
+            <div class="card">
+              <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px;letter-spacing:0.05em">Top victoires</div>
+              <div class="bilan-victoires">
+                <div class="bilan-victoire">
+                  <span class="bilan-victoire-emoji">&#9889;</span>
+                  <div>
+                    <div class="bilan-victoire-titre">Onboarding boucle en 3 jours</div>
+                    <span class="bilan-victoire-tag">TAFF</span>
+                  </div>
+                </div>
+                <div class="bilan-victoire">
+                  <span class="bilan-victoire-emoji">&#10084;</span>
+                  <div>
+                    <div class="bilan-victoire-titre">Weekend deconnecte avec Lea</div>
+                    <span class="bilan-victoire-tag">VIE</span>
+                  </div>
+                </div>
+                <div class="bilan-victoire">
+                  <span class="bilan-victoire-emoji">&#127947;</span>
+                  <div>
+                    <div class="bilan-victoire-titre">Sport 4x cette semaine</div>
+                    <span class="bilan-victoire-tag">PERSO</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Colonne droite : flow bilan -->
+          <div class="bilan-flow-wrapper">
+            <div class="card bilan-flow-card">
+
+              <!-- Progress bar -->
+              <div class="bilan-progress">
+                <div class="bilan-progress-step active" data-step-dot="1">1</div>
+                <div class="bilan-progress-line"><div class="bilan-progress-fill" style="width:0%"></div></div>
+                <div class="bilan-progress-step" data-step-dot="2">2</div>
+                <div class="bilan-progress-line"><div class="bilan-progress-fill" style="width:0%"></div></div>
+                <div class="bilan-progress-step" data-step-dot="3">3</div>
+              </div>
+
+              <div class="bilan-flow">
+
+                <div class="bilan-step active" data-step="1">
+                  <div class="fox-mascot">
+                    <img src="assets/fox/fox-thinking.svg" alt="Tao" style="height:80px">
+                  </div>
+                  <h3>Qu'est-ce que tu as accompli cette semaine que tu n'avais pas prevu ?</h3>
+                  <p class="text-muted" style="margin:8px 0 16px;font-size:13px">Les choses que tu n'avais pas mises sur ta liste mais qui ont compte.</p>
+                  <textarea class="bilan-textarea" rows="4" placeholder="Ecris ici..."></textarea>
+                  <button class="btn-primary" style="margin-top:16px">Continuer</button>
+                </div>
+
+                <div class="bilan-step" data-step="2" style="display:none">
+                  <div class="fox-mascot">
+                    <img src="assets/fox/fox-thinking.svg" alt="Tao" style="height:80px">
+                  </div>
+                  <h3>Ou est passe ton temps que tu n'as pas choisi de donner ?</h3>
+                  <p class="text-muted" style="margin:8px 0 16px;font-size:13px">Le temps subi, les interruptions, les urgences des autres.</p>
+                  <textarea class="bilan-textarea" rows="4" placeholder="Ecris ici..."></textarea>
+                  <button class="btn-primary" style="margin-top:16px">Continuer</button>
+                </div>
+
+                <div class="bilan-step" data-step="3" style="display:none">
+                  <div class="fox-mascot">
+                    <img src="assets/fox/fox-thinking.svg" alt="Tao" style="height:80px">
+                  </div>
+                  <h3>Une chose que tu vas faire differemment la semaine prochaine ?</h3>
+                  <p class="text-muted" style="margin:8px 0 16px;font-size:13px">Un seul engagement concret, pas une liste de voeux.</p>
+                  <textarea class="bilan-textarea" rows="4" placeholder="Ecris ici..."></textarea>
+                  <button class="btn-primary" style="margin-top:16px">Terminer le bilan</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Historique bilans (pleine largeur) -->
         <div class="bilan-historique">
-          <h3 style="margin-bottom:16px">Bilans precedents</h3>
+          <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;letter-spacing:0.05em">Bilans precedents</div>
+          <div class="bilan-timeline">
 
-          <div class="card bilan-card">
-            <div class="bilan-card-header">
-              <span class="font-display" style="font-size:13px">Semaine 17</span>
-              <span class="text-muted" style="font-size:12px">25 avril 2026 · Score 72</span>
+            <div class="card bilan-timeline-card">
+              <div class="bilan-tl-score">72</div>
+              <div class="bilan-tl-body">
+                <div class="bilan-tl-week">Semaine 17</div>
+                <div class="bilan-tl-date">25 avril 2026</div>
+                <div class="bilan-tl-highlight">Onboarding boucle en 3 jours</div>
+              </div>
+              <div class="bilan-tl-trend bilan-trend-up">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+                +4
+              </div>
             </div>
-            <p style="font-size:13px;color:var(--text-muted);margin-top:8px">Victoires : Onboarding boucle en 3 jours. Lea apprecie les weekends deconnectes.</p>
-          </div>
 
-          <div class="card bilan-card">
-            <div class="bilan-card-header">
-              <span class="font-display" style="font-size:13px">Semaine 16</span>
-              <span class="text-muted" style="font-size:12px">18 avril 2026 · Score 68</span>
+            <div class="card bilan-timeline-card">
+              <div class="bilan-tl-score">68</div>
+              <div class="bilan-tl-body">
+                <div class="bilan-tl-week">Semaine 16</div>
+                <div class="bilan-tl-date">18 avril 2026</div>
+                <div class="bilan-tl-highlight">Premier beta user conquis</div>
+              </div>
+              <div class="bilan-tl-trend bilan-trend-up">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+                +7
+              </div>
             </div>
-            <p style="font-size:13px;color:var(--text-muted);margin-top:8px">Victoires : Premier utilisateur beta qui a dit "c'est exactement ce qu'il me fallait".</p>
-          </div>
 
-          <div class="card bilan-card">
-            <div class="bilan-card-header">
-              <span class="font-display" style="font-size:13px">Semaine 15</span>
-              <span class="text-muted" style="font-size:12px">11 avril 2026 · Score 61</span>
+            <div class="card bilan-timeline-card">
+              <div class="bilan-tl-score">61</div>
+              <div class="bilan-tl-body">
+                <div class="bilan-tl-week">Semaine 15</div>
+                <div class="bilan-tl-date">11 avril 2026</div>
+                <div class="bilan-tl-highlight">Sport 4x — record depuis janvier</div>
+              </div>
+              <div class="bilan-tl-trend bilan-trend-down">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                -3
+              </div>
             </div>
-            <p style="font-size:13px;color:var(--text-muted);margin-top:8px">Victoires : Sport 4 fois cette semaine. Record depuis janvier.</p>
+
+            <div class="card bilan-timeline-card">
+              <div class="bilan-tl-score">64</div>
+              <div class="bilan-tl-body">
+                <div class="bilan-tl-week">Semaine 14</div>
+                <div class="bilan-tl-date">4 avril 2026</div>
+                <div class="bilan-tl-highlight">Landing page V2 livree</div>
+              </div>
+              <div class="bilan-tl-trend bilan-trend-up">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+                +2
+              </div>
+            </div>
+
           </div>
         </div>

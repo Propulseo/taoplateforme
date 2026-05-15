@@ -2,9 +2,303 @@
    TAO — Page Bilan
    ═══════════════════════════════════════════ */
 
+/* ── Header ── */
+.bilan-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.bilan-week-label {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* ── Grid principale ── */
+.bilan-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+  margin-bottom: var(--space-xl);
+}
+
+/* ── Colonne synthese ── */
+.bilan-synthese {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Score card */
+.bilan-score-card {
+  padding: var(--space-lg);
+}
+
+.bilan-score-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.bilan-score-value {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--neon);
+  line-height: 1;
+  margin-top: 4px;
+}
+
+.bilan-trend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+}
+
+.bilan-trend-up {
+  color: var(--neon);
+  background: var(--neon-deep);
+}
+
+.bilan-trend-down {
+  color: var(--error);
+  background: rgba(226, 75, 74, 0.15);
+}
+
+/* Sparkline */
+.bilan-sparkline {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 80px;
+}
+
+.bilan-spark-bar {
+  flex: 1;
+  background: var(--neon-deep);
+  border-radius: 3px 3px 0 0;
+  min-height: 4px;
+  position: relative;
+  transition: height 800ms ease-out;
+}
+
+.bilan-spark-bar.active {
+  background: var(--neon);
+}
+
+.bilan-spark-bar span {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.bilan-spark-bar.active span {
+  color: var(--neon);
+}
+
+.bilan-spark-labels {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.bilan-spark-labels span {
+  flex: 1;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+/* Stats rapides */
+.bilan-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+}
+
+.bilan-stat-mini {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: var(--space-md) var(--space-sm);
+  text-align: center;
+}
+
+.bilan-stat-icon {
+  opacity: 0.8;
+}
+
+.bilan-stat-number {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.bilan-stat-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Repartition */
+.bilan-repartition {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.bilan-rep-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.bilan-rep-label {
+  min-width: 40px;
+  color: var(--text);
+}
+
+.bilan-rep-count {
+  min-width: 20px;
+  color: var(--text-muted);
+  font-size: 12px;
+  text-align: right;
+}
+
+.bilan-rep-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bilan-rep-fill {
+  height: 100%;
+  background: var(--neon);
+  border-radius: 3px;
+  transition: width 800ms ease-out;
+}
+
+/* Victoires */
+.bilan-victoires {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.bilan-victoire {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.bilan-victoire:hover {
+  background: var(--surface-hover);
+}
+
+.bilan-victoire-emoji {
+  font-size: 18px;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.bilan-victoire-titre {
+  font-size: 13px;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.bilan-victoire-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ── Colonne flow bilan ── */
+.bilan-flow-wrapper {
+  position: sticky;
+  top: calc(var(--header-height) + 24px);
+}
+
+.bilan-flow-card {
+  padding: var(--space-xl);
+}
+
+/* Progress indicator */
+.bilan-progress {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: var(--space-xl);
+}
+
+.bilan-progress-step {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.bilan-progress-step.active {
+  border-color: var(--neon);
+  color: var(--bg);
+  background: var(--neon);
+}
+
+.bilan-progress-step.done {
+  border-color: var(--neon);
+  color: var(--neon);
+  background: var(--neon-deep);
+}
+
+.bilan-progress-line {
+  flex: 1;
+  height: 2px;
+  background: var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.bilan-progress-fill {
+  height: 100%;
+  background: var(--neon);
+  transition: width 400ms ease-out;
+}
+
+/* Flow steps */
 .bilan-flow {
-  max-width: 600px;
-  margin: 0 0 var(--space-2xl);
   text-align: center;
 }
 
@@ -17,9 +311,13 @@
   text-align: left;
 }
 
+.bilan-step .fox-mascot {
+  margin-bottom: var(--space-md);
+}
+
 .bilan-textarea {
   width: 100%;
-  min-height: 100px;
+  min-height: 120px;
   resize: vertical;
   border-radius: var(--radius-lg);
   padding: var(--space-md);
@@ -32,17 +330,103 @@
   justify-content: center;
 }
 
+/* ── Historique (pleine largeur) ── */
 .bilan-historique {
-  max-width: 600px;
-  margin: 0;
+  margin-top: var(--space-md);
 }
 
-.bilan-card {
-  margin-bottom: var(--space-md);
+.bilan-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
 }
 
-.bilan-card-header {
+.bilan-timeline-card {
   display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+  cursor: pointer;
+}
+
+.bilan-timeline-card:hover {
+  border-color: var(--neon);
+  transform: translateY(-2px);
+}
+
+.bilan-tl-score {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+
+.bilan-tl-body {
+  flex: 1;
+}
+
+.bilan-tl-week {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.bilan-tl-date {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.bilan-tl-highlight {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.bilan-tl-trend {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 3px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .bilan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bilan-flow-wrapper {
+    position: static;
+  }
+
+  .bilan-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bilan-stats-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bilan-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .bilan-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
 }

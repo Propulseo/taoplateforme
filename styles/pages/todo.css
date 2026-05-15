@@ -4,12 +4,13 @@
 
 /* ── Override main-content padding ── */
 #page-todo {
-  margin: calc(var(--space-lg) * -1);
+  margin: -24px;
+  margin-top: 0;
 }
 
 .todo-layout {
   display: flex;
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height) - 24px);
 }
 
 /* ── Sidebar Todo ── */
@@ -847,6 +848,325 @@
   font-size: 10px;
   background: var(--surface);
   margin-right: 3px;
+}
+
+/* ══════════════════════════════════════════
+   CALENDRIER
+   ══════════════════════════════════════════ */
+
+.todo-calendrier {
+  display: none;
+}
+
+.todo-calendrier.active {
+  display: block;
+  animation: fadeIn 200ms ease-out;
+}
+
+/* ── Toolbar ── */
+.todo-cal-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+  gap: var(--space-md);
+}
+
+.todo-cal-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.todo-cal-nav-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.todo-cal-nav-btn:hover {
+  border-color: var(--neon);
+  color: var(--neon);
+}
+
+.todo-cal-period {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text);
+  min-width: 200px;
+  text-align: center;
+}
+
+.todo-cal-mode-switch {
+  display: flex;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.todo-cal-mode-btn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 6px 14px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+  background: transparent;
+}
+
+.todo-cal-mode-btn:hover {
+  color: var(--text);
+}
+
+.todo-cal-mode-btn.active {
+  background: var(--neon-deep);
+  color: var(--neon);
+}
+
+/* ── Daily view ── */
+.todo-cal-daily {
+  display: none;
+}
+
+.todo-cal-daily.active {
+  display: block;
+}
+
+.todo-cal-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-cal-hour {
+  display: flex;
+  min-height: 64px;
+  border-bottom: 1px solid var(--border);
+}
+
+.todo-cal-hour-label {
+  width: 60px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+
+.todo-cal-hour-slot {
+  flex: 1;
+  position: relative;
+  padding: 4px 0;
+}
+
+.todo-cal-event {
+  background: var(--neon-deep);
+  border-left: 3px solid var(--neon);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.todo-cal-event:hover {
+  background: rgba(61, 255, 112, 0.12);
+}
+
+.todo-cal-event-accent {
+  border-left-color: #60A5FA;
+  background: rgba(96, 165, 250, 0.08);
+}
+
+.todo-cal-event-accent:hover {
+  background: rgba(96, 165, 250, 0.14);
+}
+
+.todo-cal-event-title {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text);
+  display: block;
+}
+
+.todo-cal-event-time {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 2px;
+}
+
+/* ── Weekly view ── */
+.todo-cal-weekly {
+  display: none;
+}
+
+.todo-cal-weekly.active {
+  display: block;
+}
+
+.todo-cal-week-header {
+  display: grid;
+  grid-template-columns: 50px repeat(7, 1fr);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+}
+
+.todo-cal-week-col-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 8px 4px;
+  text-align: center;
+}
+
+.todo-cal-week-col-label.todo-cal-today {
+  color: var(--neon);
+}
+
+.todo-cal-week-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-cal-week-row {
+  display: grid;
+  grid-template-columns: 50px repeat(7, 1fr);
+  min-height: 64px;
+  border-bottom: 1px solid var(--border);
+}
+
+.todo-cal-week-time {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  padding: 8px 4px 0 0;
+  text-align: right;
+}
+
+.todo-cal-week-cell {
+  border-left: 1px solid var(--border);
+  padding: 4px;
+  min-height: 64px;
+}
+
+.todo-cal-week-cell.todo-cal-today {
+  background: rgba(61, 255, 112, 0.03);
+}
+
+.todo-cal-event-sm {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text);
+  background: var(--neon-deep);
+  border-left: 2px solid var(--neon);
+  border-radius: var(--radius-sm);
+  padding: 4px 6px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.todo-cal-event-sm:hover {
+  background: rgba(61, 255, 112, 0.12);
+}
+
+.todo-cal-event-sm-accent {
+  border-left-color: #60A5FA;
+  background: rgba(96, 165, 250, 0.08);
+}
+
+.todo-cal-event-sm-accent:hover {
+  background: rgba(96, 165, 250, 0.14);
+}
+
+/* ── Monthly view ── */
+.todo-cal-monthly {
+  display: none;
+}
+
+.todo-cal-monthly.active {
+  display: block;
+}
+
+.todo-cal-month-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+}
+
+.todo-cal-month-day-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 8px;
+  text-align: center;
+}
+
+.todo-cal-month-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.todo-cal-month-cell {
+  min-height: 80px;
+  border: 1px solid var(--border);
+  border-top: none;
+  border-left: none;
+  padding: 8px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text);
+  position: relative;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.todo-cal-month-cell:nth-child(7n+1) {
+  border-left: 1px solid var(--border);
+}
+
+.todo-cal-month-cell:hover {
+  background: var(--surface);
+}
+
+.todo-cal-month-cell.other {
+  color: var(--text-muted);
+  opacity: 0.4;
+}
+
+.todo-cal-month-cell.today {
+  background: rgba(61, 255, 112, 0.05);
+  color: var(--neon);
+  font-weight: 700;
+}
+
+.todo-cal-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--neon);
+  display: inline-block;
+  margin: 2px 2px 0 0;
+}
+
+.todo-cal-dot.dot-accent {
+  background: #60A5FA;
 }
 
 /* ── Responsive ── */

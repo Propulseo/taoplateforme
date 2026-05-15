@@ -137,12 +137,12 @@
 
 .debug-messages-bar {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   z-index: 9999;
   background: rgba(12, 15, 18, 0.95);
-  border-bottom: 1px solid var(--border);
+  border-top: 1px solid var(--border);
   padding: 6px 12px;
   display: flex;
   align-items: center;
